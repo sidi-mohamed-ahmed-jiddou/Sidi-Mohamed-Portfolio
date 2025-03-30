@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="/" class="nav__logo">Sidi Mohamed</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#projets" class="nav__link">Projets</a></li>
+                        <li class="nav__item"><a href="#competence" class="nav__link">Compétences</a></li>
+                        <li class="nav__item"><a href="#certificate" class="nav__link">Certifications</a></li>
+                        <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Salut,<br>Je suis <span class="home__title-color">Sidi Mohamed</span><br> Data Scientist et <br> Développeur Python</h1>
+
+                    <a href="#" class="button" id="view-cv-button">Voir mon CV</a>
+                    <!-- <a href="#" class="button CV" id="view-cv-button">Voir mon CV</a>
+                    <a href="#contact" class="button">Contact</a> -->
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/sidi-mohamed-ahmed-jiddou" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i> </a>
+                    <a href="https://www.github.com/sidi-mohamed-ahmed-jiddou" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="mailto:ahmedjiddou.sidimohamed@gmail.com" class="home__social-icon">
+                        <i class='bx bxl-gmail'></i>
+                    </a>                    
+                    
+                    
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="60" y="75" href="assets/img/imgss.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+            
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">Je suis Sidi Mohamed</h2>
+                        <p class="about__text">
+                            Passionné par la recherche en intelligence artificielle, je suis titulaire d'un Master en Science des Données. J'ai développé
+                            des compétences en machine learning, deep learning, traitement automatique du langage naturel et web scraping. 
+                            Je suis à la recherche d'opportunités pour approfondir mes connaissances et contribuer aux avancées technologiques.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!--===== projets =====-->
+            <section class="projets section" id="projets">
+                <h2 class="section-title">PROJETS</h2>
+                <div class="projets__container bd-grid">
+                    <div class="projets__data">
+                        <h3 class="projets__name">Mémoire de fin d’études</h3>
+                        <p class="projets__description">
+                            Mémoire intitulé "Détection d’intrusion basée sur l’apprentissage automatique
+                            sur un ensemble de données multi-classes déséquilibrées à l’aide de SVMSMOTE".
+                            L’objectif de ce projet est d’améliorer la précision des systèmes de détection
+                            d’intrusion en utilisant la méthode d’échantillonnage SVMSMOTE pour résoudre
+                            le problème de déséquilibre de données et en appliquant la méthode d’élimination récursive
+                            de caractéristiques (RFE) pour réduire le nombre de caractéristiques à considérer.
+                        </p>
+                        <div class="projets__technologies">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">Matplotlib</span>
+                            <span class="tech-badge">SMOTE</span>
+                            <span class="tech-badge">SVMSMOTE</span>
+                        </div>
+                    </div>
+                    <div class="projets__data">
+                        <h3 class="projets__name">Analyse des Sentiments dans le Dialecte Arabe Marocain</h3>
+                        <p class="projets__description">
+                            Analyse des sentiments en utilisant une approche combinée de fine-tuning de BERT et
+                            d’algorithmes de machine learning pour classifier les sentiments.
+                        </p>
+                        <div class="projets__technologies">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">NLTK</span>
+                            <span class="tech-badge">BERT</span>
+                            <span class="tech-badge">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="projets__data">
+                        <h3 class="projets__name">Plateforme de Recherche de Cours en Ligne (En cours)</h3>
+                        <p class="projets__description">
+                            Conception d’une plateforme de recherche de cours en ligne utilisant le web scraping et ETL
+                            pour collecter des données de différentes sources. Ce projet est actuellement en cours de réalisation.
+                        </p>
+                        <div class="projets__technologies">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scrapy</span>
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">Airflow</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                    <div class="projets__data">
+                        <h3 class="projets__name">Application de Gestion de Pharmacie pour un Client</h3>
+                        <p class="projets__description">
+                            Réalisation d’une application web de gestion de pharmacie pour un client, permettant la gestion des stocks, des ventes et des utilisateurs avec un système de rôles et permissions.
+                        </p>
+                        <div class="projets__technologies">
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- ===== COMPÉTENCES ===== -->
+            <section class="competence section" id="competence">
+                <h2 class="section-title">COMPÉTENCES</h2>
+                <div class="competence__container bd-grid">
+                    <div class="competence__left">
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bxs-brain competence__icon'></i>
+                                <span class="competence__name">Machine Learning et Deep Learning : Text Mining, NLP, Image Mining</span>
+                            </div>
+                        </div>
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bx-code-alt competence__icon'></i>
+                                <span class="competence__name">Langages de Programmation : Python, R</span>
+                            </div>
+                        </div>
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bxs-file competence__icon'></i>
+                                <span class="competence__name">Web Scraping : Scrapy</span>
+                            </div>
+                        </div>
+
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bxl-docker competence__icon'></i>
+                                <span class="competence__name">Virtualisation et Conteneurisation : Docker</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="competence__right">
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bx-library competence__icon'></i>
+                                <span class="competence__name">Frameworks et Bibliothèques : Django, Flask, TensorFlow, PyTorch, scikit-learn, OpenCV, NLTK, NumPy, Pandas</span>
+                            </div>
+                        </div>
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bxs-data competence__icon'></i>
+                                <span class="competence__name">Bases de Données : MySQL, PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <div class="competence__data">
+                            <div class="competence__names">
+                                <i class='bx bxl-git competence__icon'></i>
+                                <span class="competence__name">Contrôle de Version : Git, GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+
+            <!--=====  CERTIFICATIONS EN LIGNE =====-->
+            <section class="certificate section" id="certificate">
+                <h2 class="section-title"> CERTIFICATIONS EN LIGNE</h2>
+
+                <div class="certificate__container bd-grid">
+                    <a href="https://learn.365datascience.com/c/eb5cfddc17/" class="certificate__img" target="_blank">
+                        <img src="assets/img/cnn_certificate.png" alt="">
+                    </a>
+                    <a href="https://learn.365datascience.com/c/90f3805339/" class="certificate__img" target="_blank">
+                        <img src="assets/img/nlp_certificate.png" alt="">
+                    </a>
+                    <a href="https://app.datascientist.fr/certificat/12YKCBFRG812J" class="certificate__img" target="_blank">
+                        <img src="assets/img/docker.jpeg" alt="">
+                    </a>
+                    <a href="" class="certificate__img" target="_blank">
+                        <img src="img/work4.jpg" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <!-- <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Envoyer" class="contact__button button">
+                    </form>
+                </div>
+            </section> -->
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Sidi Mohamed</p>
+            
+            <!-- <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div> -->
+            <p class="footer__copy">
+                Développé avec
+                <i class='bx bxl-html5'></i>,
+                <i class='bx bxl-css3'></i> ,
+                <i class="bx bxl-javascript"></i>
+            </p>            
+            
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
