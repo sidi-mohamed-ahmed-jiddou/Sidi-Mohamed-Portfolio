@@ -70,3 +70,17 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(cvPath, '_blank');
     });
 });
+
+
+
+/*===== PROJECTS =====*/
+function toggleDetails(button) {
+    const content = button.parentElement.nextElementSibling;
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        button.textContent = "-";
+    } else {
+        content.style.display = "none";
+        button.textContent = "+";
+    }
+}

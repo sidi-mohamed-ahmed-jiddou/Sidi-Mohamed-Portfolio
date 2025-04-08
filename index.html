@@ -93,74 +93,153 @@
             </section>
 
 
-            <!--===== projets =====-->
+        
+            <!--===== PROJETS =====-->
             <section class="projets section" id="projets">
                 <h2 class="section-title">PROJETS</h2>
-                <div class="projets__container bd-grid">
-                    <div class="projets__data">
-                        <h3 class="projets__name">Mémoire de fin d’études</h3>
-                        <p class="projets__description">
-                            Mémoire intitulé "Détection d’intrusion basée sur l’apprentissage automatique
-                            sur un ensemble de données multi-classes déséquilibrées à l’aide de SVMSMOTE".
-                            L’objectif de ce projet est d’améliorer la précision des systèmes de détection
-                            d’intrusion en utilisant la méthode d’échantillonnage SVMSMOTE pour résoudre
-                            le problème de déséquilibre de données et en appliquant la méthode d’élimination récursive
-                            de caractéristiques (RFE) pour réduire le nombre de caractéristiques à considérer.
-                        </p>
-                        <div class="projets__technologies">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Scikit-learn</span>
-                            <span class="tech-badge">Pandas</span>
-                            <span class="tech-badge">NumPy</span>
-                            <span class="tech-badge">Matplotlib</span>
-                            <span class="tech-badge">SMOTE</span>
-                            <span class="tech-badge">SVMSMOTE</span>
+                
+                <div class="projects-container">
+                        <!-- Projet 1 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Mémoire de fin d'études</h3>
+                                <!-- <div class="project-date-badge">2023</div> -->
+                                <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                            </div>
+                            <div class="project-content" style="display: none;">
+                                <p class="project-description">
+                                    Mémoire intitulé "Détection d'intrusion basée sur l'apprentissage automatique
+                                    sur un ensemble de données multi-classes déséquilibrées à l'aide de SVMSMOTE".
+                                    L'objectif de ce projet est d'améliorer la précision des systèmes de détection
+                                    d'intrusion en utilisant la méthode d'échantillonnage SVMSMOTE pour résoudre
+                                    le problème de déséquilibre de données et en appliquant la méthode d'élimination récursive
+                                    de caractéristiques (RFE) pour réduire le nombre de caractéristiques à considérer.
+                                </p>
+                                <div class="project-tech-container">
+                                    <span class="project-tech-badge">Python</span>
+                                    <span class="project-tech-badge">Scikit-learn</span>
+                                    <span class="project-tech-badge">Pandas</span>
+                                    <span class="project-tech-badge">NumPy</span>
+                                    <span class="project-tech-badge">Matplotlib</span>
+                                    <span class="project-tech-badge">SMOTE</span>
+                                    <span class="project-tech-badge">SVMSMOTE</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Projet 2 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Analyse des Sentiments (Arabe Marocain)</h3>
+                                <!-- <div class="project-date-badge">2022</div> -->
+                                <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                            </div>
+                            <div class="project-content" style="display: none;">
+                                <p class="project-description">
+                                    Analyse des sentiments en utilisant une approche combinée de fine-tuning de BERT et
+                                    d'algorithmes de machine learning pour classifier les sentiments dans le dialecte arabe marocain.
+                                </p>
+                                <div class="project-tech-container">
+                                    <span class="project-tech-badge">Python</span>
+                                    <span class="project-tech-badge">NLTK</span>
+                                    <span class="project-tech-badge">BERT</span>
+                                    <span class="project-tech-badge">Machine Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                    <!-- Projet 3 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Plateforme de Cours en Ligne</h3>
+                            <div class="project-status-badge">En cours</div>
+                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                        </div>
+                        <div class="project-content" style="display: none;">
+                            <p class="project-description">
+                                Conception d'une plateforme de recherche de cours en ligne utilisant le web scraping et ETL
+                                pour collecter des données de différentes sources. Ce projet est actuellement en cours de réalisation.
+                            </p>
+                            <div class="project-tech-container">
+                                <span class="project-tech-badge">Python</span>
+                                <span class="project-tech-badge">Scrapy</span>
+                                <span class="project-tech-badge">React.js</span>
+                                <span class="project-tech-badge">Airflow</span>
+                                <span class="project-tech-badge">Docker</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="projets__data">
-                        <h3 class="projets__name">Analyse des Sentiments dans le Dialecte Arabe Marocain</h3>
-                        <p class="projets__description">
-                            Analyse des sentiments en utilisant une approche combinée de fine-tuning de BERT et
-                            d’algorithmes de machine learning pour classifier les sentiments.
-                        </p>
-                        <div class="projets__technologies">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">NLTK</span>
-                            <span class="tech-badge">BERT</span>
-                            <span class="tech-badge">Machine Learning</span>
+
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Gestion de Pharmacie</h3>
+                            <!-- <div class="project-date-badge">2021</div> -->
+                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
                         </div>
-                    </div>
-                    <div class="projets__data">
-                        <h3 class="projets__name">Plateforme de Recherche de Cours en Ligne (En cours)</h3>
-                        <p class="projets__description">
-                            Conception d’une plateforme de recherche de cours en ligne utilisant le web scraping et ETL
-                            pour collecter des données de différentes sources. Ce projet est actuellement en cours de réalisation.
-                        </p>
-                        <div class="projets__technologies">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Scrapy</span>
-                            <span class="tech-badge">React.js</span>
-                            <span class="tech-badge">Airflow</span>
-                            <span class="tech-badge">Docker</span>
+                        <div class="project-content" style="display: none;">
+                            <p class="project-description">
+                                Réalisation d'une application web de gestion de pharmacie pour un client, permettant la gestion des stocks,
+                                des ventes et des utilisateurs avec un système de rôles et permissions.
+                            </p>
+                            <div class="project-tech-container">
+                                <span class="project-tech-badge">Flask</span>
+                                <span class="project-tech-badge">PostgreSQL</span>
+                                <span class="project-tech-badge">JavaScript</span>
+                                <span class="project-tech-badge">HTML5</span>
+                                <span class="project-tech-badge">CSS3</span>
+                                <span class="project-tech-badge">Docker</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="projets__data">
-                        <h3 class="projets__name">Application de Gestion de Pharmacie pour un Client</h3>
-                        <p class="projets__description">
-                            Réalisation d’une application web de gestion de pharmacie pour un client, permettant la gestion des stocks, des ventes et des utilisateurs avec un système de rôles et permissions.
-                        </p>
-                        <div class="projets__technologies">
-                            <span class="tech-badge">Flask</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">HTML5</span>
-                            <span class="tech-badge">CSS3</span>
-                            <span class="tech-badge">Docker</span>
+                    </div>   
+                    
+                    <!-- projet 4 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Chat avec plusieurs PDFs</h3>
+                            <!-- <div class="project-status-badge">Nouveau</div> -->
+                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                        </div>
+                        <div class="project-content" style="display: none;">
+                            <p class="project-description">
+                                Ce projet permet aux utilisateurs de télécharger plusieurs documents PDF et d'engager une conversation avec le contenu de ces documents. L'application utilise diverses bibliothèques et outils pour extraire du texte des PDF, diviser le texte en morceaux gérables, créer des embeddings vectoriels et configurer une chaîne de récupération conversationnelle avec mémoire.
+                            </p>
+                            <h4 class="project-subtitle">Fonctionnalités</h4>
+                            <ul class="project-features">
+                                <li>Télécharger et traiter plusieurs documents PDF.</li>
+                                <li>Extraire du texte des PDF et le diviser en morceaux.</li>
+                                <li>Créer des embeddings vectoriels en utilisant les modèles Hugging Face.</li>
+                                <li>Configurer une chaîne de récupération conversationnelle avec mémoire.</li>
+                                <li>Engager une conversation avec le contenu des PDF téléchargés.</li>
+                            </ul>
+                            <h4 class="project-subtitle">Prérequis</h4>
+                            <ul class="project-requirements">
+                                <li>Python 3.7 ou supérieur</li>
+                                <li>Streamlit</li>
+                                <li>PyPDF2</li>
+                                <li>LangChain</li>
+                                <li>Hugging Face Transformers</li>
+                                <li>FAISS</li>
+                                <li>dotenv</li>
+                            </ul>
+                            <h4 class="project-subtitle">Modifications clés</h4>
+                            <p class="project-description">
+                                Création de la clé API Groq : J'ai ajouté une note importante concernant la création d'un compte sur Groq pour obtenir une clé API, nécessaire pour utiliser le modèle Llama via l'API. Ainsi, vos utilisateurs sauront qu'ils doivent s'inscrire sur Groq et ajouter leur clé API dans le fichier .env pour utiliser le modèle Llama.
+                            </p>
+                            <div class="project-tech-container">
+                                <span class="project-tech-badge">Python</span>
+                                <span class="project-tech-badge">Streamlit</span>
+                                <span class="project-tech-badge">PyPDF2</span>
+                                <span class="project-tech-badge">LangChain</span>
+                                <span class="project-tech-badge">Hugging Face</span>
+                                <span class="project-tech-badge">FAISS</span>
+                                <span class="project-tech-badge">dotenv</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
 
             <!-- ===== COMPÉTENCES ===== -->
             <section class="competence section" id="competence">
