@@ -4,90 +4,97 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- Suppression des anciens liens CSS -->
+        <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
+        
+        <!-- Ajout de Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
         <title>Portfolio website complete</title>
     </head>
-    <body>
+    <body class="bg-gray-50">
         <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
+        <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+            <nav class="container mx-auto px-6 h-16 flex justify-between items-center">
                 <div>
-                    <a href="/" class="nav__logo">Sidi Mohamed</a>
+                    <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Sidi Mohamed</a>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#projets" class="nav__link">Projets</a></li>
-                        <li class="nav__item"><a href="#competence" class="nav__link">Compétences</a></li>
-                        <li class="nav__item"><a href="#certificate" class="nav__link">Certifications</a></li>
-                        <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
+                <div class="hidden md:block" id="nav-menu">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="nav-link text-gray-800 hover:text-blue-600 transition-colors duration-300 font-medium flex flex-col items-center uppercase">Home<span class="underline-bar hidden mt-1 w-8 h-0.5 bg-blue-600 rounded"></span></a></li>
+                        <li><a href="#about" class="nav-link text-gray-800 hover:text-blue-600 transition-colors duration-300 font-medium flex flex-col items-center uppercase">About<span class="underline-bar hidden mt-1 w-8 h-0.5 bg-blue-600 rounded"></span></a></li>
+                        <li><a href="#projets" class="nav-link text-gray-800 hover:text-blue-600 transition-colors duration-300 font-medium flex flex-col items-center uppercase">Projets<span class="underline-bar hidden mt-1 w-8 h-0.5 bg-blue-600 rounded"></span></a></li>
+                        <li><a href="#competence" class="nav-link text-gray-800 hover:text-blue-600 transition-colors duration-300 font-medium flex flex-col items-center uppercase">Compétences<span class="underline-bar hidden mt-1 w-8 h-0.5 bg-blue-600 rounded"></span></a></li>
+                        <li><a href="#certificate" class="nav-link text-gray-800 hover:text-blue-600 transition-colors duration-300 font-medium flex flex-col items-center uppercase">Certifications<span class="underline-bar hidden mt-1 w-8 h-0.5 bg-blue-600 rounded"></span></a></li>
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="md:hidden cursor-pointer" id="nav-toggle">
+                    <i class='bx bx-menu text-2xl'></i>
                 </div>
             </nav>
         </header>
 
-        <main class="l-main">
+        <main class="pt-16">
             <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Salut,<br>Je suis <span class="home__title-color">Sidi Mohamed</span><br> Data Scientist et <br> Développeur Python</h1>
+            <section class="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-blue-50 to-white" id="home">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="space-y-8">
+                        <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                            Salut,<br>
+                            Je suis <span class="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Sidi Mohamed</span><br>
+                            <span class="text-4xl md:text-5xl">Data Scientist et</span><br>
+                            <span class="text-4xl md:text-5xl">Développeur Python</span>
+                        </h1>
 
-                    <a href="#" class="button" id="view-cv-button">Voir mon CV</a>
-                    <!-- <a href="#" class="button CV" id="view-cv-button">Voir mon CV</a>
-                    <a href="#contact" class="button">Contact</a> -->
-                </div>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Passionné par l'intelligence artificielle et le développement, je crée des solutions innovantes pour résoudre des problèmes complexes.
+                        </p>
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/sidi-mohamed-ahmed-jiddou" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i> </a>
-                    <a href="https://www.github.com/sidi-mohamed-ahmed-jiddou" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
-                    <a href="mailto:ahmedjiddou.sidimohamed@gmail.com" class="home__social-icon">
-                        <i class='bx bxl-gmail'></i>
-                    </a>                    
-                    
-                    
-                </div>
+                        <div class="flex justify-center space-x-6">
+                            <a href="assets/CV_SIDI_MOHAMED.pdf" target="_blank" class="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-4 rounded-full font-semibold shadow-md hover:from-blue-700 hover:to-blue-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1" id="view-cv-button">
+                                Voir mon CV
+                                <i class='bx bx-download text-2xl ml-2'></i>
+                            </a>
+                        </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="60" y="75" href="assets/img/imgss.png"/>
-                        </g>
-                    </svg>
+                        <div class="flex justify-center space-x-8 pt-8">
+                            <a href="https://www.linkedin.com/in/sidi-mohamed-ahmed-jiddou" class="text-3xl text-gray-600 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1" target="_blank">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://www.github.com/sidi-mohamed-ahmed-jiddou" class="text-3xl text-gray-600 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1" target="_blank">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="mailto:ahmedjiddou.sidimohamed@gmail.com" class="text-3xl text-gray-600 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1">
+                                <i class='bx bxl-gmail'></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
             
 
             <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+            <section class="py-16 px-4" id="about">
+                <h2 class="text-3xl font-bold text-center text-blue-600 mb-12 relative after:content-[''] after:absolute after:w-16 after:h-0.5 after:bg-blue-600 after:left-1/2 after:-translate-x-1/2 after:top-16">About</h2>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center">
+                        <img src="assets/img/about.jpg" alt="" class="w-40 md:w-56 mx-auto rounded-full shadow-lg ring-4 ring-blue-200 hover:scale-105 transition-transform duration-300" loading="lazy">
                     </div>
 
-                    <div>
-                        <h2 class="about__subtitle">Je suis Sidi Mohamed</h2>
-                        <p class="about__text">
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-semibold">Je suis Sidi Mohamed</h2>
+                        <p class="text-gray-700 leading-relaxed">
                             Passionné par la recherche en intelligence artificielle, je suis titulaire d'un Master en Science des Données. J'ai développé
                             des compétences en machine learning, deep learning, traitement automatique du langage naturel et web scraping. 
                             Je suis à la recherche d'opportunités pour approfondir mes connaissances et contribuer aux avancées technologiques.
                         </p>
-
                     </div>
                 </div>
             </section>
@@ -95,146 +102,131 @@
 
         
             <!--===== PROJETS =====-->
-            <section class="projets section" id="projets">
-                <h2 class="section-title">PROJETS</h2>
+            <section class="py-16 px-4 bg-gray-50" id="projets">
+                <h2 class="text-3xl font-bold text-center text-blue-600 mb-12 relative after:content-[''] after:absolute after:w-16 after:h-0.5 after:bg-blue-600 after:left-1/2 after:-translate-x-1/2 after:top-16">PROJETS</h2>
+                <p class="text-center text-lg text-gray-700 mb-8">J'ai travaillé sur plusieurs projets variés. Vous pouvez consulter l'ensemble de mes réalisations et contributions sur mon
+                    <a href="https://github.com/sidi-mohamed-ahmed-jiddou" target="_blank" class="text-blue-600 underline hover:text-blue-800 transition-colors"> <i class='bx bxl-github align-middle ml-1'></i></a>.
+                </p>
                 
-                <div class="projects-container">
-                        <!-- Projet 1 -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">Mémoire de fin d'études</h3>
-                                <!-- <div class="project-date-badge">2023</div> -->
-                                <button class="project-toggle" onclick="toggleDetails(this)">+</button>
-                            </div>
-                            <div class="project-content" style="display: none;">
-                                <p class="project-description">
-                                    Mémoire intitulé "Détection d'intrusion basée sur l'apprentissage automatique
-                                    sur un ensemble de données multi-classes déséquilibrées à l'aide de SVMSMOTE".
-                                    L'objectif de ce projet est d'améliorer la précision des systèmes de détection
-                                    d'intrusion en utilisant la méthode d'échantillonnage SVMSMOTE pour résoudre
-                                    le problème de déséquilibre de données et en appliquant la méthode d'élimination récursive
-                                    de caractéristiques (RFE) pour réduire le nombre de caractéristiques à considérer.
-                                </p>
-                                <div class="project-tech-container">
-                                    <span class="project-tech-badge">Python</span>
-                                    <span class="project-tech-badge">Scikit-learn</span>
-                                    <span class="project-tech-badge">Pandas</span>
-                                    <span class="project-tech-badge">NumPy</span>
-                                    <span class="project-tech-badge">Matplotlib</span>
-                                    <span class="project-tech-badge">SMOTE</span>
-                                    <span class="project-tech-badge">SVMSMOTE</span>
-                                </div>
-                            </div>
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+                    <!-- Projet 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Mémoire de fin d'études</h3>
+                            <button class="text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-300" onclick="toggleDetails(this)">+</button>
                         </div>
-                    
-                        <!-- Projet 2 -->
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">Analyse des Sentiments (Arabe Marocain)</h3>
-                                <!-- <div class="project-date-badge">2022</div> -->
-                                <button class="project-toggle" onclick="toggleDetails(this)">+</button>
-                            </div>
-                            <div class="project-content" style="display: none;">
-                                <p class="project-description">
-                                    Analyse des sentiments en utilisant une approche combinée de fine-tuning de BERT et
-                                    d'algorithmes de machine learning pour classifier les sentiments dans le dialecte arabe marocain.
-                                </p>
-                                <div class="project-tech-container">
-                                    <span class="project-tech-badge">Python</span>
-                                    <span class="project-tech-badge">NLTK</span>
-                                    <span class="project-tech-badge">BERT</span>
-                                    <span class="project-tech-badge">Machine Learning</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        
-                    <!-- Projet 3 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Plateforme de Cours en Ligne</h3>
-                            <div class="project-status-badge">En cours</div>
-                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
-                        </div>
-                        <div class="project-content" style="display: none;">
-                            <p class="project-description">
-                                Conception d'une plateforme de recherche de cours en ligne utilisant le web scraping et ETL
-                                pour collecter des données de différentes sources. Ce projet est actuellement en cours de réalisation.
+                        <div class="hidden space-y-4">
+                            <p class="text-gray-700">
+                                Mémoire intitulé "Détection d'intrusion basée sur l'apprentissage automatique
+                                sur un ensemble de données multi-classes déséquilibrées à l'aide de SVMSMOTE".
+                                L'objectif de ce projet est d'améliorer la précision des systèmes de détection
+                                d'intrusion en utilisant la méthode d'échantillonnage SVMSMOTE pour résoudre
+                                le problème de déséquilibre de données et en appliquant la méthode d'élimination récursive
+                                de caractéristiques (RFE) pour réduire le nombre de caractéristiques à considérer.
                             </p>
-                            <div class="project-tech-container">
-                                <span class="project-tech-badge">Python</span>
-                                <span class="project-tech-badge">Scrapy</span>
-                                <span class="project-tech-badge">React.js</span>
-                                <span class="project-tech-badge">Airflow</span>
-                                <span class="project-tech-badge">Docker</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Scikit-learn</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Pandas</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">NumPy</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Matplotlib</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">SMOTE</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">SVMSMOTE</span>
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Gestion de Pharmacie</h3>
-                            <!-- <div class="project-date-badge">2021</div> -->
-                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                    <!-- Projet 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Analyse des Sentiments (Arabe Marocain)</h3>
+                            <button class="text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-300" onclick="toggleDetails(this)">+</button>
                         </div>
-                        <div class="project-content" style="display: none;">
-                            <p class="project-description">
+                        <div class="hidden space-y-4">
+                            <p class="text-gray-700">
+                                Analyse des sentiments en utilisant une approche combinée de fine-tuning de BERT et
+                                d'algorithmes de machine learning pour classifier les sentiments dans le dialecte arabe marocain.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">NLTK</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">BERT</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Plateforme de Cours en Ligne</h3>
+                            <div class="flex items-center gap-2">
+                                <button class="text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-300" onclick="toggleDetails(this)">+</button>
+                            </div>
+                        </div>
+                        <div class="hidden space-y-4">
+                            <p class="text-gray-700">
+                                Conception d'une plateforme de recherche de cours en ligne utilisant le web scraping et ETL
+                                pour collecter des données de différentes sources. Ce projet est actuellement en cours de réalisation.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Scrapy</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">React.js</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Airflow</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Gestion de Pharmacie</h3>
+                            <button class="text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-300" onclick="toggleDetails(this)">+</button>
+                        </div>
+                        <div class="hidden space-y-4">
+                            <p class="text-gray-700">
                                 Réalisation d'une application web de gestion de pharmacie pour un client, permettant la gestion des stocks,
                                 des ventes et des utilisateurs avec un système de rôles et permissions.
                             </p>
-                            <div class="project-tech-container">
-                                <span class="project-tech-badge">Flask</span>
-                                <span class="project-tech-badge">PostgreSQL</span>
-                                <span class="project-tech-badge">JavaScript</span>
-                                <span class="project-tech-badge">HTML5</span>
-                                <span class="project-tech-badge">CSS3</span>
-                                <span class="project-tech-badge">Docker</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Flask</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">HTML5</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">CSS3</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Docker</span>
                             </div>
                         </div>
-                    </div>   
-                    
-                    <!-- projet 4 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Chat avec plusieurs PDFs</h3>
-                            <!-- <div class="project-status-badge">Nouveau</div> -->
-                            <button class="project-toggle" onclick="toggleDetails(this)">+</button>
+                    </div>
+
+                    <!-- Projet 5 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Chat avec plusieurs PDFs</h3>
+                            <button class="text-2xl text-gray-600 hover:text-blue-600 transition-colors duration-300" onclick="toggleDetails(this)">+</button>
                         </div>
-                        <div class="project-content" style="display: none;">
-                            <p class="project-description">
+                        <div class="hidden space-y-4">
+                            <p class="text-gray-700">
                                 Ce projet permet aux utilisateurs de télécharger plusieurs documents PDF et d'engager une conversation avec le contenu de ces documents. L'application utilise diverses bibliothèques et outils pour extraire du texte des PDF, diviser le texte en morceaux gérables, créer des embeddings vectoriels et configurer une chaîne de récupération conversationnelle avec mémoire.
                             </p>
-                            <h4 class="project-subtitle">Fonctionnalités</h4>
-                            <ul class="project-features">
+                            <h4 class="text-lg font-semibold">Fonctionnalités</h4>
+                            <ul class="list-disc pl-5 space-y-2">
                                 <li>Télécharger et traiter plusieurs documents PDF.</li>
                                 <li>Extraire du texte des PDF et le diviser en morceaux.</li>
                                 <li>Créer des embeddings vectoriels en utilisant les modèles Hugging Face.</li>
                                 <li>Configurer une chaîne de récupération conversationnelle avec mémoire.</li>
                                 <li>Engager une conversation avec le contenu des PDF téléchargés.</li>
                             </ul>
-                            <h4 class="project-subtitle">Prérequis</h4>
-                            <ul class="project-requirements">
-                                <li>Python 3.7 ou supérieur</li>
-                                <li>Streamlit</li>
-                                <li>PyPDF2</li>
-                                <li>LangChain</li>
-                                <li>Hugging Face Transformers</li>
-                                <li>FAISS</li>
-                                <li>dotenv</li>
-                            </ul>
-                            <h4 class="project-subtitle">Modifications clés</h4>
-                            <p class="project-description">
-                                Création de la clé API Groq : J'ai ajouté une note importante concernant la création d'un compte sur Groq pour obtenir une clé API, nécessaire pour utiliser le modèle Llama via l'API. 
-                            </p>
-                            <div class="project-tech-container">
-                                <span class="project-tech-badge">Python</span>
-                                <span class="project-tech-badge">Streamlit</span>
-                                <span class="project-tech-badge">PyPDF2</span>
-                                <span class="project-tech-badge">LangChain</span>
-                                <span class="project-tech-badge">Hugging Face</span>
-                                <span class="project-tech-badge">FAISS</span>
-                                <span class="project-tech-badge">dotenv</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Streamlit</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">PyPDF2</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">LangChain</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">Hugging Face</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">FAISS</span>
+                                <span class="px-3 py-1 bg-gray-100 text-blue-600 rounded-full text-sm">dotenv</span>
                             </div>
                         </div>
                     </div>
@@ -242,65 +234,47 @@
             </section>
 
             <!-- ===== COMPÉTENCES ===== -->
-            <section class="competence section" id="competence">
-                <h2 class="section-title">COMPÉTENCES</h2>
-                <div class="competence__container bd-grid">
-                    <div class="competence__left">
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxs-brain competence__icon'></i>
-                                <span class="competence__name">Machine Learning et Deep Learning : Text Mining, NLP, Image Mining</span>
-                            </div>
+            <section class="py-16 px-4" id="competence">
+                <h2 class="text-3xl font-bold text-center text-blue-600 mb-12 relative after:content-[''] after:absolute after:w-16 after:h-0.5 after:bg-blue-600 after:left-1/2 after:-translate-x-1/2 after:top-16">COMPÉTENCES</h2>
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxs-brain text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Machine Learning et Deep Learning : Text Mining, NLP, Image Mining</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bx-code-alt competence__icon'></i>
-                                <span class="competence__name">Langages de Programmation : Python, R</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bx-code-alt text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Langages de Programmation : Python, R</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxs-file competence__icon'></i>
-                                <span class="competence__name">Web Scraping : Scrapy, Beautiful Soup</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxs-file text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Web Scraping : Scrapy, Beautiful Soup</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxl-docker competence__icon'></i>
-                                <span class="competence__name">Virtualisation et Conteneurisation : Docker</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxl-docker text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Virtualisation et Conteneurisation : Docker</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bx-data competence__icon'></i>
-                                <span class="competence__name">Orchestration de Workflows : Apache Airflow</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bx-data text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Orchestration de Workflows : Apache Airflow</span>
                         </div>
                     </div>
-                    <div class="competence__right">
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bx-library competence__icon'></i>
-                                <span class="competence__name">Frameworks et Bibliothèques : Django, Flask, FastAPI, Streamlit, TensorFlow, PyTorch, scikit-learn, OpenCV, NLTK, NumPy, Pandas</span>
-                            </div>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bx-library text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Frameworks et Bibliothèques : Django, Flask, FastAPI, Streamlit, TensorFlow, PyTorch, scikit-learn, OpenCV, NLTK, NumPy, Pandas</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxs-data competence__icon'></i>
-                                <span class="competence__name">Bases de Données : MySQL, PostgreSQL, SQL</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxs-data text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Bases de Données : MySQL, PostgreSQL, SQL</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxl-git competence__icon'></i>
-                                <span class="competence__name">Contrôle de Version : Git, GitHub</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxl-git text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Contrôle de Version : Git, GitHub</span>
                         </div>
-                        <div class="competence__data">
-                            <div class="competence__names">
-                                <i class='bx bxs-bar-chart-alt-2 competence__icon'></i>
-                                <span class="competence__name">Business Intelligence : Power BI</span>
-                            </div>
+                        <div class="bg-white rounded-lg shadow-md p-6 flex items-center">
+                            <i class='bx bxs-bar-chart-alt-2 text-3xl text-blue-600 mr-4'></i>
+                            <span class="text-gray-800">Business Intelligence : Power BI</span>
                         </div>
                     </div>
                 </div>
@@ -310,18 +284,18 @@
 
 
             <!--=====  CERTIFICATIONS EN LIGNE =====-->
-            <section class="certificate section" id="certificate">
-                <h2 class="section-title"> CERTIFICATIONS EN LIGNE</h2>
+            <section class="py-16 px-4" id="certificate">
+                <h2 class="text-3xl font-bold text-center text-blue-600 mb-12 relative after:content-[''] after:absolute after:w-16 after:h-0.5 after:bg-blue-600 after:left-1/2 after:-translate-x-1/2 after:top-16">CERTIFICATIONS EN LIGNE</h2>
 
-                <div class="certificate__container bd-grid">
-                    <a href="https://learn.365datascience.com/c/eb5cfddc17/" class="certificate__img" target="_blank">
-                        <img src="assets/img/cnn_certificate.png" alt="">
+                <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                    <a href="https://learn.365datascience.com/c/eb5cfddc17/" class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" target="_blank">
+                        <img src="assets/img/cnn_certificate.png" alt="" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
-                    <a href="https://learn.365datascience.com/c/90f3805339/" class="certificate__img" target="_blank">
-                        <img src="assets/img/nlp_certificate.png" alt="">
+                    <a href="https://learn.365datascience.com/c/90f3805339/" class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" target="_blank">
+                        <img src="assets/img/nlp_certificate.png" alt="" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
-                    <a href="https://app.datascientist.fr/certificat/12YKCBFRG812J" class="certificate__img" target="_blank">
-                        <img src="assets/img/docker.jpeg" alt="">
+                    <a href="https://app.datascientist.fr/certificat/12YKCBFRG812J" class="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" target="_blank">
+                        <img src="assets/img/docker.jpeg" alt="" class="w-full h-auto hover:scale-105 transition-transform duration-300" loading="lazy">
                     </a>
                 </div>
             </section>
@@ -342,25 +316,25 @@
         </main>
 
         <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Sidi Mohamed</p>
-            
-            <!-- <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
-            </div> -->
-            <p class="footer__copy">
-                Développé avec
-                <i class='bx bxl-html5'></i>,
-                <i class='bx bxl-css3'></i> ,
-                <i class="bx bxl-javascript"></i>
-            </p>            
-            
+        <hr class="border-t-0 mb-0">
+        <footer class="bg-[#0C1733] text-white text-center py-4 mt-0">
+            <div class="max-w-2xl mx-auto flex flex-col items-center gap-2" style="background-color: #0C1733;">
+                <p class="text-3xl font-bold tracking-wide drop-shadow-lg">Sidi Mohamed</p>
+                <div class="flex gap-6 justify-center mb-2">
+                    <a href="https://www.linkedin.com/in/sidi-mohamed-ahmed-jiddou" target="_blank">
+                        <i class='bx bxl-linkedin text-2xl' style="color:#0A66C2;"></i>
+                    </a>
+                    <a href="https://www.github.com/sidi-mohamed-ahmed-jiddou" target="_blank">
+                        <i class='bx bxl-github text-2xl' style="color:#fff;"></i>
+                    </a>
+                    <a href="mailto:ahmedjiddou.sidimohamed@gmail.com">
+                        <i class='bx bxl-gmail text-2xl' style="color:#EA4335;"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-neutral-300">&copy; 2025 Sidi Mohamed. Tous droits réservés.</p>
+            </div>
         </footer>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
